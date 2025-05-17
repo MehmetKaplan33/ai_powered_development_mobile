@@ -1,15 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çukurova Üniversitesi Giriş</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
 
-      <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .left-panel {
+            background: #fff;
+            width: 35%;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 0 24px 0 rgba(0, 0, 0, 0.05);
+            padding: 40px 30px;
+        }
+
+        .logo-screen {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .logo-screen img {
+            width: 120px;
+            margin-bottom: 8px;
+            margin-right: 16px;
+        }
+
+        .logo-screen h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            color: #1a3d2f;
+            text-align: center;
+        }
+
+        .sub {
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 4px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f6f7fb;
+            border-radius: 8px;
+            padding: 0 0 0 12px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            border: none;
+            background: transparent;
+            padding: 12px 8px;
+            flex: 1;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .input-group .icon {
+            background: #165a2f;
+            color: #fff;
+            padding: 0 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .forgot {
+            font-size: 0.95rem;
+            color: #165a2f;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            align-self: flex-end;
+        }
+
+        .login {
+            background: #165a2f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px 0 rgba(22, 90, 47, 0.08);
+            transition: background 0.2s;
+        }
+
+        .login:hover {
+            background: #124d28;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #aaa;
+            margin: 16px 0 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+            margin: 0 8px;
+        }
+
+        .signup {
+            background: #fff;
+            color: #165a2f;
+            border: 2px solid #165a2f;
+            border-radius: 6px;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .signup:hover {
+            background: #165a2f;
+            color: #fff;
+        }
+
+        .right-panel
+{
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            overflow: hidden;
+        }
+
+        .right-panel img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-panel,
+            .right-panel {
+                width: 100%;
+                min-width: unset;
+                min-height: 320px;
+            }
+
+            .right-panel img {
+                height: 220px;
+            }
+        }
+    </style>
 </head>
-<body>
-      
 
-      <script src="assets/js/script.js"></script>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo-screen">
+                <img src="assets/image/cukurova_logo (1).png" alt="Çukurova Üniversitesi Logo">
+
+                <h1 style="color:  #165a2f;">Çukurova
+                    <br>
+                    Üniversitesi
+                </h1>
+            </div>
+            <br>
+            <p class="sub">Login into your account</p>
+
+            <form>
+                <label>Email address</label>
+                <div class="input-group">
+                    <input type="email" placeholder="mail@mail.com" required />
+                    <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                </div>
+
+                <label>Password</label>
+                <div class="input-group">
+                    <input type="password" placeholder="Şifrenizi Giriniz" required />
+                    <span class="icon"><i class="fa-regular fa-lock"></i></span>
+                </div>
+
+                <a href="#" class="forgot">Forgot password?</a>
+
+                <button type="submit" class="login"><a href="#">Login now</a></button>
+
+                <div class="divider">OR</div>
+
+                <button type="button" class="signup"><a href="#">Signup now</a></button>
+            </form>
+        </div>
+
+        <div class="right-panel">
+            <img src="assets/image/images.jpeg" alt="Çukurova Kampüs" />
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
