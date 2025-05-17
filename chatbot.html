@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÇÜ Asistan - Sohbet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+  </head>
+  <body>
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="header-wrapper">
+        <div class="header-left">
+          <a href="chatbot.html">
+            <img src="assets/image/cukurova_logo (1).png" alt="Çukurova Üniversitesi Logo" />
+          </a>
+          <h1>Çukurova Üniversitesi</h1>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="chatbot.html">Ana Sayfa</a></li>
+            <li><a href="#">Akademik</a></li>
+            <li><a href="#">Öğrenci</a></li>
+            <li><a href="#">İletişim</a></li>
+            <li><a href="index.html" class="login-link"><i class="fa-solid fa-user"></i> Giriş</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="chat-page">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <div class="header-content">
+          <a href="chatbot.html" class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <div class="bot-info">
+            <img src="assets/image/cukurova_logo (1).png" alt="Bot Avatar" class="bot-avatar">
+            <div class="bot-details">
+              <h1>ÇÜ Asistan</h1>
+              <span class="status">Çevrimiçi</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Chat Messages Area -->
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+          <img src="assets/image/cukurova_logo (1).png" alt="Bot Avatar" class="message-avatar">
+          <div class="message-content">
+            <div class="message-text">
+              Merhaba! Ben ÇÜ Asistan. Size nasıl yardımcı olabilirim?
+            </div>
+            <span class="message-time">şimdi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-area">
+        <div class="input-container">
+          <input 
+            type="text" 
+            id="userInput" 
+            placeholder="Mesajınızı yazın..."
+            autocomplete="off"
+          >
+          <button id="sendMessage">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="suggestion-chips">
+          <button class="chip" data-message="kütüphane">📚 Kütüphane Saatleri</button>
+          <button class="chip" data-message="yemekhane">🍽️ Yemekhane Menüsü</button>
+          <button class="chip" data-message="nerede">📍 Kampüs Konumu</button>
+          <button class="chip" data-message="iletişim">📞 İletişim</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>İletişim</h4>
+          <p><i class="fa-solid fa-location-dot"></i> Çukurova Üniversitesi, Adana</p>
+          <p><i class="fa-solid fa-phone"></i> +90 322 XXX XX XX</p>
+          <p><i class="fa-solid fa-envelope"></i> info@cu.edu.tr</p>
+        </div>
+        <div class="footer-section">
+          <h4>Hızlı Bağlantılar</h4>
+          <ul>
+            <li><a href="#">Akademik Birimler</a></li>
+            <li><a href="#">Öğrenci İşleri</a></li>
+            <li><a href="#">Kütüphane</a></li>
+            <li><a href="#">E-posta</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Sosyal Medya</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Çukurova Üniversitesi. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/chatbot.js"></script>
+  </body>
+</html>

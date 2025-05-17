@@ -268,7 +268,8 @@ label {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-  body {
+  html, body {
+    height: auto;
     overflow-y: auto;
   }
 
@@ -276,34 +277,108 @@ label {
     flex-direction: column;
     height: auto;
     min-height: 100vh;
+    overflow: visible;
   }
 
   .left-panel {
     width: 100%;
     min-width: unset;
     height: auto;
-    padding: 20px;
+    padding: 40px 20px;
     overflow: visible;
-  }
-
-  .right-panel {
-    height: 250px;
-  }
-
-  .right-panel img {
-    height: 100%;
   }
 
   .logo-screen {
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .logo-screen img {
-    width: 80px;
+    width: 70px;
   }
 
   .logo-screen h1 {
     font-size: 1.6rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+    height: 48px;
+  }
+
+  .input-group .icon {
+    padding: 0 15px;
+    font-size: 1rem;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-group input {
+    padding: 12px 10px;
+  }
+
+  .right-panel {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .right-panel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .login, .signup {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel {
+    padding: 30px 15px;
+  }
+
+  .logo-screen {
+    margin-bottom: 20px;
+  }
+
+  .logo-screen img {
+    width: 60px;
+  }
+
+  .logo-screen h1 {
+    font-size: 1.4rem;
+  }
+
+  .input-group {
+    height: 45px;
+    margin-bottom: 12px;
+  }
+
+  .input-group input {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+  }
+
+  .input-group .icon {
+    padding: 0 12px;
+    font-size: 0.9rem;
+    width: 40px;
+  }
+
+  .password-toggle {
+    height: 100%;
+  }
+
+  .password-toggle i {
+    font-size: 0.9rem;
   }
 }
